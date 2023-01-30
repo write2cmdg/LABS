@@ -107,6 +107,14 @@ async function renderIndex(req, res) {
     }
 }
 
+async function renderLoginmmUserForm(req, res) {
+    try {
+        res.render("loginmmUser");
+    } catch (error) {
+        console.log(`renderIndex error: ${error}`);
+    }
+}
+
 
 
 module.exports = {
@@ -122,5 +130,6 @@ module.exports = {
     renderUpdatemmGameForm,
 
     renderCreatemmUserForm,
+    renderLoginmmUserForm,
     renderIndex,
 }

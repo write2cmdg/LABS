@@ -17,7 +17,9 @@ const {
     renderOnemmGame,
     renderCreatemmGameForm,
     renderUpdatemmGameForm,
+
     renderCreatemmUserForm,
+    renderLoginmmUserForm,
     
 } = require("../../controllers/view/viewController");
 
@@ -28,6 +30,7 @@ router.get("/", (req, res) => {
 
 router.get("/index", renderIndex);
 router.get("/createmmUser", renderCreatemmUserForm);
+router.get("/loginmmUser", renderLoginmmUserForm);
 
 
 
