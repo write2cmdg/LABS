@@ -199,8 +199,12 @@ input:last-child:hover {
     align-items: center;
 }
 
-.home_container span {
+.home_container span, .logout {
     font-size: 2rem;
+}
+
+.logout {
+    text-transform: uppercase;
 }
 
 .all_games_container img {

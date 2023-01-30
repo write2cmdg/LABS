@@ -10,7 +10,6 @@ const methodOverride = require('method-override');
 const connectToMongoDB = require("./database/mongodb");
 const session = require('express-session');
 const seshLength = 1000 * 60 * 60 * 2;
-const bodyParser = require('body-parser');
 
 
 
