@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+  <head>
+
+    <%-include('./partials/head') %>
+
+    <title>All the Megaman Games!</title>
+
+  </head>
+
+  <body style="overflow: hidden;">
+
+      <span><a href="/">Home</a></span><br><br>
+
+      <span><a href="/createmmGame">Create a Game</a></span><br><br><br>
+
+      <div class="all_games_container">
+
+        <% mmGame.forEach( (gm) => { %>
+
+          <a href="/onemmGame/<%= gm.Name %>"><img src="../public/images/<%=gm.Name%>.png" onerror="this.src='../public/images/Megaman.png'" alt="<%=gm.Name%>"></a>
+
+        <% }) %>
+
+      </div>
+
+    <%-include('./partials/stars-bg') %>
+
+  </body>
+  
+</html>

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+    <head>
+
+        <%-include('./partials/head') %>
+
+        <title><%=mmGame.Name%></title>
+
+    </head>
+
+    <body>
+
+        <span><a href="/">Home</a><br><br></span>
+
+        <span><a href="/allmmGame">All Games</a></span>
+
+        <div class="card_container">
+                
+            <img src="../public/images/<%=mmGame.Name%>.png" alt="" onerror="this.src='../public/images/Megaman.png'">
+
+            <div class="card_container_story">
+
+                <h2> <span>Story:</span><br><%= mmGame.Story %> </h2>
+
+                <br>
+
+                <h2><span>Year Released:<br></span> <%= mmGame.Year %></h2>
+
+            </div>
+
+            <div class="against_container">
+
+                <h2><span>Bosses Featured in this game:</span></h2>
+
+            </div>
+
+            <ul>
+
+                <div class="against_container">
+
+                    <% mmGame.Bosses.forEach( (Bosses) => { %>
+
+                            <li>
+
+                                <a href="/onemmBoss/<%=Bosses%>">
+
+                                    <img src="../public/images/<%=Bosses%>.png" onerror="this.src='../public/images/Dr_Wily.png'" alt="<%=Bosses%>">
+
+                                </a>
+
+                            </li>
+
+                        <% }) %>
+
+                </div>
+
+            </ul>
+
+        </div><!--card_container-->
+
+    
+    <span><a href="/updatemmGame/<%=mmGame.Name %>">Update Game</a></span><br>
+
+    <form action="/api/deleteOnemmGame/<%=mmGame.Name%>?_method=DELETE" method="post">
+        <input type="submit" name="_method" value="DELETE THIS GAME">
+    </form>
+
+    <%-include('./partials/stars-bg') %>       
+    
+    </body>
+    
+</html>

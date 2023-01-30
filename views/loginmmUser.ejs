@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+    <head>
+
+        <%-include('./partials/head') %>
+
+        <title>Login</title>
+
+    </head>
+
+    <body>
+
+
+
+        <div class="card_container">
+
+            <span><h1>Welcome! Please Login</h1></span>
+        
+            <form action="/api/loginmmUser" method="post">
+                
+                <label for="email"><span>Email:</span><br></label>
+                <input type="email" id="email" name="email" placeholder="* Required"><br><br>
+                
+                
+                <label for="password"><span>Password:</span><br></label>
+                <input type="password" id="password" name="password" placeholder="* Required"><br><br>
+                
+        
+                <input type="submit" value="Login">
+
+                <p><a href="./createmmUser">Need an account? Create new user here</a></p>
+            </form>
+
+        </div>
+
+        <div class="sprite_container_mech-fly">
+            <img src="../public/images/mech-fly.png" alt="" id="mech-fly">
+        </div>
+
+        <%-include('./partials/stars-bg') %>
+ 
+    </body>
+
+</html>

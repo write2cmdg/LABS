@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+    <head>
+
+        <%-include('./partials/head') %>
+
+        <title><%= mmBoss.Name %></title>
+
+    </head>
+
+    <body>
+
+        <span><a href="/">Home</a><br><br></span>
+
+        <span><a href="/allmmBoss">All Bosses</a></span>
+
+        <div class="card_container_bosses">
+                    
+            <img src="../public/images/<%=mmBoss.Name%>.png" onerror="this.src='../public/images/Dr_Wily.png'" alt="">
+
+            <div class="info_box2">
+
+                <h1><span>Name:</span><%= mmBoss.Name %></h1>
+
+                <h2><span>HP:</span> <%= mmBoss.HP %></h2>
+
+                <h2><span>Weapon:</span><%= mmBoss.Weapon %></h2>
+
+                <h2><span>Attack:</span> <%= mmBoss.Attack %></h2>
+
+                <h2><span>Weakness:</span> <%= mmBoss.Weakness %></h2>
+
+                <h2><span>Featured in:</span><br>
+
+                    <a href="/onemmGame/<%=mmBoss.Game%>"><img src="../public/images/<%=mmBoss.Game%>.png"  onerror="this.src='../public/images/Megaman.png'" style="height: 150px;"></a>
+
+                </h2>
+
+            </div>
+
+        </div><!--Card contgainer-->
+
+        <span><a href="/updatemmBoss/<%=mmBoss.Name %>">Update Boss</a></span><br><br><br>
+            
+        <form action="/api/deleteOnemmBoss/<%=mmBoss.Name%>?_method=DELETE" method="post">
+            <input type="submit" name="_method" value="DELETE THIS BOSS">
+        </form>
+
+        <%-include('./partials/stars-bg') %>
+
+    </body>
+
+</html>

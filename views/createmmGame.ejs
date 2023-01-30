@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+    <head>
+
+        <%-include('./partials/head') %>
+
+        <title>Create a Megaman Game</title>
+
+    </head>
+
+    <body>
+
+        <span><a href="/">Home</a></span>
+
+        <span><a href="/allmmgame">All Games</a><br><br></span>
+
+        <div class="card_container">
+
+            <span><h1>create a new game</h1></span>
+
+            <form action="/api/createOnemmGame" method="post">
+
+                <label for="Name"><span>Name</span></label><br>
+                <input type="text" id="Name" name="Name"><br><br>
+
+                <label for="Year"><span>Year</span></label><br>
+                <input type="text" id="Year" name="Year"><br><br>
+
+                <label for="Story"><span>Story</span></label><br>
+                <input type="text" id="Story" name="Story" size="50"><br><br>
+
+                <label for="Bosses"><span>Bosses</span></label><br>
+                <input type="text" id="Bosses" name="Bosses"><br><br>
+
+
+                <input type="submit" value="Create mmGame">
+            </form>
+
+        </div>
+
+        <div class="sprite_container_mech-fly">
+            <img src="../public/images/mech-fly.png" alt="" id="mech-fly">
+        </div>
+
+        <%-include('./partials/stars-bg') %>
+
+    </body>
+
+</html>

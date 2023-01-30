@@ -1,0 +1,364 @@
+* {
+    margin: 0;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: 'Press Start 2P', sans-serif;
+    color: #fff;
+    text-shadow: 2px 2px #000;
+    border-radius: 6px;
+    text-decoration: none;
+    list-style: none;
+}
+
+body {
+    display:flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    background-color: #000022;
+    padding-top: 50px;
+    overflow-x: hidden;
+}
+
+.bg_holder {
+    background-image: url(../images/background.png);
+    background-size: cover;
+    background-position: bottom center;
+    background-attachment: fixed;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    width: 100vw;
+    height: 100vh;
+    
+}
+.bg_holder img {
+    border: none;
+}
+
+.canvas_container {
+    position: absolute;
+    z-index: -2;
+}
+
+canvas {
+    position: absolute;
+    z-index: -1;
+}
+.star {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 75px;
+    height: 4px;   
+    /* background: rgb(255,255,255); */
+    background: linear-gradient(90deg, rgba(255,255,255,1) 0%, rgba(255,255,255,0) 15%, rgba(255,255,255,0) 100%);    
+    border-radius: 50%;
+    z-index: -2;
+  }
+
+  @keyframes scroll {
+    from {
+      transform: translate(-50%, -50%);
+    }
+    to {
+      transform: translate(-50%, -50%) translate(calc(-50% - 100vw));
+    }
+  }
+
+h1 {
+    font-size: 1.5rem;
+}
+
+h2 {
+    font-size: 1rem;
+}
+
+h1, h2, a {
+    /* padding: 10px; */
+    /* margin: 4px; */
+    line-height: 2rem;
+    letter-spacing: 1px;
+    display: inline-block;
+    /* width: 100%; */
+    padding: 8px;
+}
+
+img {
+    height: 200px;
+    border: 8px solid #0e2c86;
+    border-radius: 8px;
+    float: left;
+    /* margin: 15px; */
+    margin-right: auto;
+    margin-left: auto;
+}
+
+a>img:hover, a>img:focus {
+    /* opacity: .65; */
+    mix-blend-mode:hard-light;
+    box-shadow: 1px 1px 16px #0df;
+}
+
+input {
+    padding: 10px;
+    text-shadow: none;
+    color:#081849;
+    width: 650px;
+    margin: 6px;
+    background-color: #fff;
+}
+
+label {
+    margin: 6px;
+    text-shadow: none;
+    color:#081849;
+}
+
+a {
+    color:#07f;
+    width: fit-content;
+    margin: auto;
+}
+a:hover, a:focus, input:hover, input:focus{
+    color: chartreuse;
+    text-shadow: none;
+    
+}
+
+input:last-child {
+    background-color: #07f;
+}
+input:last-child:hover {
+    background-color: rgb(150, 16, 16);
+}
+
+
+
+
+.card_container_bosses, .card_container_weapons {
+    text-align: left;
+    background-color: #2738a050;
+    padding: 20px;
+    border: 6px solid #0e2c86;
+    margin: 25px;
+    width: 60%;
+    box-shadow: 3px 3px 10px #081849;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    text-align: center;
+    float: right;
+}
+
+.card_container_bosses img {
+    height: 350px;
+}
+
+
+.card_container_weapons {
+    border: none;
+    width: 100%;
+    box-shadow: none;
+}
+
+.all_bosses_container {
+    background-color: #2738a050;
+    width:60%;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    box-shadow: 3px 3px 10px #081849;
+    border: 6px solid #0e2c86;
+    gap: 8px;
+    padding: 15px;
+}
+
+.all_bosses_container img {
+    width: 100%;
+    height:auto;
+}
+
+.all_bosses_container a {
+    margin-left: auto;
+    margin-right: auto;    
+}
+
+.home_container {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.home_container span {
+    font-size: 2rem;
+}
+
+.all_games_container img {
+height: 145px;
+}
+.all_games_container {
+    /* background-color: #2738a0; */
+    width:75%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+    /* box-shadow: 3px 3px 10px #081849; */
+    /* border: 6px solid #0e2c86; */
+}
+
+.card_container {
+    background-color: #2738a050;
+    padding: 20px;
+    border: 6px solid #0e2c86;
+    margin: 25px;
+    width: 60%;
+    box-shadow: 3px 3px 10px #081849;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    text-align: left;
+    min-width: 1175px;
+}
+.card_container_story {
+    padding: 20px;
+    margin: 25px;
+    width: 750px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: flex-start;
+    text-align: left;
+}
+.card_container_images {
+    background-color: #2738a0;
+    height: 600px;
+    padding: 10px;
+    border: 6px solid #0e2c86;
+    margin: 25px;
+    box-shadow: 3px 3px 10px #081849;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: flex-start;
+    text-align: left;
+}
+.card_container_text {
+    background-color: #2738a050;
+    height: 600px;
+    min-width: 600px;
+    padding: 10px;
+    margin: 25px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: flex-start;
+    text-align: left;
+}
+
+span {
+    text-transform: uppercase;
+    font-size: 1.25rem;
+    color: #05e2f6;
+    vertical-align: middle;
+}
+
+
+.against_container {
+    /* border: 8px solid #0e2c86; */
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 15px;
+}
+.info_box2 {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: flex-start;
+    padding: 15px;
+    text-align: left;
+    float: right;
+    margin: auto;
+    width: 50%;
+} 
+.info_box {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 15px;
+    text-align: center;
+    float: right;
+    margin: auto;
+} 
+
+.info_box img {
+    height: 150px;
+    margin: auto;
+}
+
+.against_container img {
+    height: 125px;
+    margin:5px;
+}
+
+.sprite_container {
+    width: 150px;
+    height: 200;
+    overflow: hidden;
+    /* border: 6px solid white; */
+}
+
+.sprite_container_mech-fly {
+    width: 200px;
+    height: 200px;
+    overflow: hidden;
+    transform: scaleX(-1);
+
+    /* border: 6px solid white; */
+}
+
+.sprite_container img, .sprite_container_mech-fly img {
+    border: none;
+    height: 200px;
+    /* width: 2000px; */
+}
+
+
+
+#idle {
+    animation: sprite-animation .25s steps(4) infinite;
+}
+#charge {
+    animation: sprite-animation .75s steps(12) infinite;
+}
+#mech-fly {
+    animation: sprite-animation .25s steps(3) infinite;
+}
+#telly {
+    animation: sprite-animation 1s steps(12) infinite;
+}
+  
+@keyframes sprite-animation {
+    0% {
+      transform: translate3d(0%, 0, 0);
+    }
+
+    100% {
+        transform: translate3d(-100%, 0, 0);
+    }
+}

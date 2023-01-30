@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+    <head>
+
+        <%-include('./partials/head') %>
+
+        <title>Update <%=mmBoss.Name%></title>
+
+    </head>
+
+    <body>
+
+        <span><a href="/">Home</a><br><br></span>
+
+        <span><a href="/allmmboss">All Bosses</a><br><br></span>
+
+        <div class="card_container">
+
+            <h1><span>Update <%=mmBoss.Name%></span></h1>
+            
+            <form action="/api/updateOnemmBoss/<%=mmBoss.Name%>?_method=PUT" method="post">
+
+
+                <label for="Name"><span>Name:</span></label><br>
+                <input type="text" placeholder="<%mmBoss.Name%>" value="<%=mmBoss.Name%>" id="Name" name="Name"><br>
+
+                <label for="HP"><span>HP:</span></label><br>
+                <input type="text" placeholder="<%mmBoss.HP%>" value="<%=mmBoss.HP%>" id="HP" name="HP"><br>
+
+                <label for="Weapon"><span>Weapon:</span></label><br>
+                <input type="text" placeholder="<%mmBoss.Weapon%>" value="<%=mmBoss.Weapon%>" id="Weapon" name="Weapon"><br>
+
+                <label for="Attack"><span>Attack:</span></label><br>
+                <input type="text" placeholder="<%mmBoss.Attack%>" value="<%=mmBoss.Attack %>" id="Attack" name="Attack"><br>
+
+                <label for="Weakness"><span>Weakness:</span></label><br>
+                <input type="text" placeholder="<%mmBoss.Weakness%>" value="<%=mmBoss.Weakness%>" id="Weakness" name="Weakness"><br>
+
+                <label for="Game"><span>Game:</span></label><br>
+                <input type="text" placeholder="<%mmBoss.Game%>" value="<%=mmBoss.Game%>" id="Game" name="Game"><br>
+
+                <input type="submit" name="_method" value="Update mmBoss">
+
+                
+
+            </form>
+
+        </div>
+
+        <div class="sprite_container">
+            <img src="../public/images/mm-charge6000x750.png" alt="" id="charge">
+        </div>
+
+        <%-include('./partials/stars-bg') %>
+        
+    </body>
+
+</html>

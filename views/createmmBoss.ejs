@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+    <head>
+
+        <%-include('./partials/head') %>
+
+        <title>Create a Megaman Boss</title>
+
+    </head>
+
+    <body>
+
+        <span><a href="/">Home</a></span>
+
+        <span><a href="/allmmBoss">All Bosses</a></span><br><br>
+
+        <div class="card_container">
+
+            <span><h1>create a new Boss</h1></span>
+        
+            <form action="/api/createOnemmBoss" method="post">
+
+                <label for="Name"><span>Name:</span><br></label>
+                <input type="text" id="Name" name="Name"><br><br>
+                
+                <label for="HP"><span>HP:</span><br></label>
+                <input type="text" id="HP" name="HP"><br><br>
+                
+                
+                <label for="Weapon"><span>Weapon:</span><br></label>
+                <input type="text" id="Weapon" name="Weapon"><br><br>
+                
+                <label for="Attack"><span>Attack:</span><br></label>
+                <input type="text" id="Attack" name="Attack" size="50"><br><br>
+                
+                <label for="Weakness"><span>Weakness:</span><br></label>
+                <input type="text" id="Weakness" name="Weakness"><br><br>
+                
+                <label for="Game"><span>Game:</span><br></label>
+                <input type="text" id="Game" name="Game"><br><br>
+        
+                <input type="submit" value="Create mmBoss">
+            </form>
+
+        </div>
+
+        <div class="sprite_container_mech-fly">
+            <img src="../public/images/mech-fly.png" alt="" id="mech-fly">
+        </div>
+
+        <%-include('./partials/stars-bg') %>
+ 
+    </body>
+
+</html>

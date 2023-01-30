@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+    <head>
+
+        <%-include('./partials/head') %>
+
+        <title>Update <%=mmGame.Name%></title>
+
+    </head>
+
+    <body>
+
+        <span><a href="/">Home</a><br><br></span>
+
+        <span><a href="/allmmgame">All Games</a><br><br></span>
+
+        <div class="card_container">
+
+            <h1><span>Update <%=mmGame.Name%></span></h1>
+            
+            <form action="/api/updateOnemmGame/<%=mmGame.Name%>?_method=PUT" method="post">
+
+                <label for="Name"><span>Name</span></label><br>
+                <input type="text" placeholder="<%mmGame.Name%>" value="<%=mmGame.Name %>" id="Name" name="Name"><br>
+        
+                <label for="Year"><span>Year</span></label><br>
+                <input type="text" placeholder="<%mmGame.Year%>" value="<%=mmGame.Year %>" id="Year" name="Year"><br>
+        
+                <label for="Story"><span>Story</span></label><br>
+                <input type="text" placeholder="<%mmGame.Story%>" value="<%=mmGame.Story %>" id="Story" name="Story"><br>
+        
+                <label for="Bosses"><span>Bosses</span></label><br>
+                <input type="text" placeholder="<%mmGame.Bosses.join(", ")%>" value="<%=mmGame.Bosses.join(", ") %>" id="Bosses" name="Bosses"><br>
+
+        
+                <input type="submit" name="_method" value="Update mmGame">
+        
+            </form>
+
+        </div>
+
+        <div class="sprite_container">
+            <img src="../public/images/mm-charge6000x750.png" alt="" id="charge">
+        </div>
+
+        <%-include('./partials/stars-bg') %>
+    
+    </body>
+    
+</html>
