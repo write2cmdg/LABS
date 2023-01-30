@@ -4,6 +4,7 @@ const bcrypt = require("bcrypt");
 
 
 async function createmmUser(req, res) {
+
     try {
         let {email, password} = req.body;
         let salt = await bcrypt.genSalt(10);
@@ -18,7 +19,7 @@ async function createmmUser(req, res) {
 
         await mmUser.create(newUserObj);
 
-        res.redirect("/");
+        res.redirect("/loginmmUser");
 
     }catch (err) {
         console.log(`createUser error: ${err}`)
@@ -53,7 +54,7 @@ async function loginmmUser(req, res) {
 
                 req.session.user = userObj;
 
-                res.redirect("/")
+                res.redirect("/index")
 
             }
         }

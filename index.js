@@ -38,7 +38,7 @@ const mmGameRouter = require("./routes/api/mmGameRouter");
 app.use("/api", mmGameRouter);
 
 const mmUserRouter = require("./routes/api/mmUserRouter");
-app.use("/", mmUserRouter);
+app.use("/api", mmUserRouter);
 
 const viewsRouter = require("./routes/viewRouters/viewRouter");
 app.use("/", viewsRouter);
