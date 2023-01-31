@@ -24,7 +24,7 @@ const {
 } = require("../../controllers/view/viewController");
 
 router.get("/", (req, res) => {
-    res.render("loginmmUser");
+    res.render("index");
 });
 
 
